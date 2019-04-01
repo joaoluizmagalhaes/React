@@ -61,5 +61,5 @@ const traveler = new Traveler('Pedro', 25, 'São Paulo');
 
 const other = new Traveler();
 
-console.log(traveler.getGreeting(), other.getDescription());
+console.log(traveler.getGreeting(), other.getGreeting());
 
