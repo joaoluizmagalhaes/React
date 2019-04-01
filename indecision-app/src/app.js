@@ -39,8 +39,12 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+	constructor(props) {
+		super(props);
+		this.handleRemoveAll = this.handleRemoveAll.bind(this);
+	}
 	handleRemoveAll() {
-		alert('Remove All');
+		console.log(this.props.options);
 	}
 	render() {
 		return (
@@ -69,10 +73,10 @@ class AddOption extends React.Component {
 	handleAddOption(e) {
 		e.preventDefautl;
 		
-		const option = e.target.elements.option.value;
+		const option = e.target.elements.option.value.trim();
 
 		if(option) {
-			alert('handleAddOption');
+			alert(option);
 		}
 	}
 	render() {
