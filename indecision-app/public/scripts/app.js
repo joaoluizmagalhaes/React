@@ -49,7 +49,6 @@ var Header = function (_React$Component2) {
 	_createClass(Header, [{
 		key: 'render',
 		value: function render() {
-
 			return React.createElement(
 				'div',
 				null,
@@ -80,6 +79,11 @@ var Action = function (_React$Component3) {
 	}
 
 	_createClass(Action, [{
+		key: 'handlePick',
+		value: function handlePick() {
+			alert('handlepick');
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return React.createElement(
@@ -87,7 +91,7 @@ var Action = function (_React$Component3) {
 				null,
 				React.createElement(
 					'button',
-					null,
+					{ onClick: this.handlePick },
 					'What Should I do?'
 				)
 			);
@@ -107,11 +111,21 @@ var Options = function (_React$Component4) {
 	}
 
 	_createClass(Options, [{
+		key: 'handleRemoveAll',
+		value: function handleRemoveAll() {
+			alert('Remove All');
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return React.createElement(
 				'div',
 				null,
+				React.createElement(
+					'button',
+					{ onClick: this.handleRemoveAll },
+					'Remove All'
+				),
 				this.props.options.map(function (option) {
 					return React.createElement(Option, { key: option, optionText: option });
 				})
@@ -122,35 +136,8 @@ var Options = function (_React$Component4) {
 	return Options;
 }(React.Component);
 
-var AddOption = function (_React$Component5) {
-	_inherits(AddOption, _React$Component5);
-
-	function AddOption() {
-		_classCallCheck(this, AddOption);
-
-		return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
-	}
-
-	_createClass(AddOption, [{
-		key: 'render',
-		value: function render() {
-			return React.createElement(
-				'div',
-				null,
-				React.createElement(
-					'button',
-					null,
-					'AddOption'
-				)
-			);
-		}
-	}]);
-
-	return AddOption;
-}(React.Component);
-
-var Option = function (_React$Component6) {
-	_inherits(Option, _React$Component6);
+var Option = function (_React$Component5) {
+	_inherits(Option, _React$Component5);
 
 	function Option() {
 		_classCallCheck(this, Option);
@@ -170,6 +157,49 @@ var Option = function (_React$Component6) {
 	}]);
 
 	return Option;
+}(React.Component);
+
+var AddOption = function (_React$Component6) {
+	_inherits(AddOption, _React$Component6);
+
+	function AddOption() {
+		_classCallCheck(this, AddOption);
+
+		return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
+	}
+
+	_createClass(AddOption, [{
+		key: 'handleAddOption',
+		value: function handleAddOption(e) {
+			e.preventDefautl;
+
+			var option = e.target.elements.option.value;
+
+			if (option) {
+				alert('handleAddOption');
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'form',
+					{ onSubmit: this.handleAddOption },
+					React.createElement('input', { type: 'text', name: 'option' }),
+					React.createElement(
+						'button',
+						null,
+						'Add Option'
+					)
+				)
+			);
+		}
+	}]);
+
+	return AddOption;
 }(React.Component);
 
 ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
