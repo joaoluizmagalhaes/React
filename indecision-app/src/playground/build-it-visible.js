@@ -5,7 +5,6 @@ class VisibilityToggle extends React.Component {
 		this.state = {
 			visibility: false
 		}
-
 	}
 
 	handleToggle() {
