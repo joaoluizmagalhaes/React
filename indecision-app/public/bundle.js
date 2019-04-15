@@ -69,32 +69,56 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
-// import './utils.js';
-// import { square, add } from './utils.js';
-
-
-// console.log('app.js is running!');
-
-// console.log(square(4), add(1,3));
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__person_js__ = __webpack_require__(2);
 
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["b" /* isAdult */](17), __WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* canDrink */](22));
+
+console.log('app.js is running!');
+
+// console.log(square(4), add(1,3), subtract(200, 145));
+
+
+
+console.log(__WEBPACK_IMPORTED_MODULE_1__person_js__["c" /* isAdult */](17), __WEBPACK_IMPORTED_MODULE_1__person_js__["a" /* canDrink */](22), __WEBPACK_IMPORTED_MODULE_1__person_js__["b" /* default */](76));
 
 /***/ }),
-/* 1 */,
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+console.log('utils.js is running');
+
+const square = (x) => x * x;
+/* unused harmony export square */
+
+
+const add = (a, b) => a + b;
+/* unused harmony export add */
+
+
+const subtract = (a, b) => a - b;
+
+/* unused harmony default export */ var _unused_webpack_default_export = (subtract);
+
+//export { square, add, subtract as default}
+
+/***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const isAdult = (age) => age >= 18 ;
-/* harmony export (immutable) */ __webpack_exports__["b"] = isAdult;
+const isAdult = (age) => age >= 18;
+/* harmony export (immutable) */ __webpack_exports__["c"] = isAdult;
 
-const canDrink = (age) => age >= 21 ;
+const canDrink = (age) => age >= 21;
 /* harmony export (immutable) */ __webpack_exports__["a"] = canDrink;
 
 
+const isSenior = (age) => age >= 65;
+
+/* harmony default export */ __webpack_exports__["b"] = (isSenior);
 // export {isAdult, canDrink}
 
 /***/ })
