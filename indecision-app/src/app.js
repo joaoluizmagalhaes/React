@@ -8,7 +8,7 @@ class IndecisionApp extends React.Component {
 		this.handleDeleteOption = this.handleDeleteOption.bind(this);
 		this.state = {
 			subtitle: 'Put your life in the hands of a computer',
-			options: props.options
+			options: []
 		}
 	}
 
@@ -82,10 +82,6 @@ class IndecisionApp extends React.Component {
 			</div>
 		);
 	}
-}
-
-IndecisionApp.defaultProps = {
-	options: []
 }
 
 const Header = (props) => {
