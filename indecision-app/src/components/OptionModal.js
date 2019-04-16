@@ -5,8 +5,8 @@ Modal.setAppElement('#app'); //prevent accessibilty readers to read the app cont
 
 const OptionModal = (props) => (
     <Modal
-        id
         isOpen={!!props.selectedOption}
+        onRequestClose={props.handleCloseModal}
         contentLabel="Selected Option"
     >
         <h3>Selected Option</h3>
