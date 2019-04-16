@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "webpack": "4.2.0"
+  },
+  "dependencies": {
+    "react-modal": "2.2.2"
+  }
+}
