@@ -1,5 +1,6 @@
 .add-option {
     display: flex;
+    flex-direction: column;
     padding: $m-size;
 }
 
@@ -8,7 +9,7 @@
     background: $dark-blue;
     border: 0;
     border-bottom: .3rem solid darken($dark-blue, 10%);
-    margin: 0 $s-size 0 0;
+    margin: 0 0 $s-size 0;
     color: $off-white;
     padding: $s-size;
 }
@@ -18,4 +19,14 @@
     font-style: italic;
     padding: 0 $m-size;
     margin: $m-size 0 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .add-option {
+        flex-direction: row;
+    }
+
+    .add-option__input {
+        margin: 0 $s-size 0 0;
+    }
 }
