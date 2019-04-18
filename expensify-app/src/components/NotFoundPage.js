@@ -1,5 +1,5 @@
 import React from 'react';
-import { notDeepEqual } from 'assert';
+import {Link} from 'react-router-dom';
 
 const NotFoundPage = () => (
     <div>
