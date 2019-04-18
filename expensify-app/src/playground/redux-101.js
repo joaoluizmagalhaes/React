@@ -1,16 +1,37 @@
 import { createStore } from 'redux';
 
+// Action Generators - 
+
+const incrementCount = ({incrementBy = 1} = {}) => ({
+    type: 'INCREMENT',
+    incrementBy
+});
+
+const decrementCount = ({decrementBy = 1} = {}) => ({
+    type: 'DECREMENT',
+    decrementBy
+});
+
+const setCount = ({count}) => ({
+    type: 'SET',
+    count
+});
+
+const resetCount = () => ({
+    type: 'RESET'
+});
+
 const store = createStore((state = { count: 0 }, action) => {
     switch (action.type) {
         case 'INCREMENT':
-            const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
+            console.log(action.incrementBy)
             return {
-                count: state.count + incrementBy
+                count: state.count + action.incrementBy
             };
         case 'DECREMENT':
-            const decrementBy = typeof action.decrementBy === 'number' ? action.decrementBy : 1;
+            console.log(action.decrementBy)
             return {
-                count: state.count - decrementBy
+                count: state.count - action.decrementBy
             };
         case 'RESET':
             return {
@@ -38,26 +59,20 @@ store.dispatch({
     incrementBy: 5
 });
 
-store.dispatch({
-    type: 'INCREMENT' //CONVENTION USE CAPITAL LETTERS IN REDUX
-});
+store.dispatch(incrementCount({incrementBy: 5}));
+
+store.dispatch(incrementCount());
 
 // Reset
-store.dispatch({
-    type: 'RESET'
-});
+store.dispatch(resetCount());
 
 // Decrement Count
 store.dispatch({
-    type: 'DECREMENT'
-});
-
-store.dispatch({
     type: 'DECREMENT',
-    decrementBy: 3
+    decrementBy: 2
 });
 
-store.dispatch({
-    type: 'SET',
-    count: 101
-});
+store.dispatch(decrementCount());
+store.dispatch(decrementCount({decrementBy: 3}));
+
+// store.dispatch(setCount({ count: 102 }));
