@@ -11,9 +11,14 @@
     "test": "jest"
   },
   "dependencies": {
+<<<<<<< HEAD
     "babel-cli": "^7.0.0-beta.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.7.1",
+=======
+    "babel-cli": "^6.26.0",
+    "babel-core": "6.25.0",
+>>>>>>> parent of 5bdc0d4... Section 12, Setting up Jest.
     "babel-loader": "7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
