@@ -1,5 +1,5 @@
-import { addExpenses, editExpense, removeExpense } from '../../actions/expenses';
-jest.mock('../../actions/expenses', () => 'myExpenses');
+import { removeExpense } from '../../actions/expenses';
+//jest.mock('../../actions/expenses', () => 'myExpenses');
 
 test('should set up remove expense action object', () => {
     const action = removeExpense({ id: '123abc'});
