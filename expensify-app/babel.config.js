@@ -1,14 +1,21 @@
-// babel.config.js
-module.exports = {
-	"presets": [
-		"env", 
+module.exports = function (api) {
+    api.cache(true);
+  
+    const presets = [
+        "env", 
 		"react"
-	],
-	"plugins": [
+    ];
+    const plugins = [
 		"transform-class-properties",
 		"transform-object-rest-spread"
-	],
-	"test": [
+    ];
+    const test = [
 		"jest"
-	]
-}
+    ];
+    
+    return {
+      presets,
+      plugins, 
+      test
+    };
+  }
