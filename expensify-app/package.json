@@ -1,53 +1,35 @@
 {
-  "name": "expensify-app",
+  "name": "indecision-app",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Joao Luiz Magalhaes",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public/",
-    "build": "webpack",
-    "dev-server": "webpack-dev-server",
-    "test": "jest"
+  "serve": "live-server public/",
+  "build": "webpack",
+  "dev-server": "webpack-dev-server"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "babel-cli": "^7.0.0-beta.3",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.7.1",
-=======
-    "babel-cli": "^6.26.0",
-    "babel-core": "6.25.0",
->>>>>>> parent of 5bdc0d4... Section 12, Setting up Jest.
-    "babel-loader": "7.1.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
-    "babel-preset-env": "1.5.2",
-    "babel-preset-react": "6.24.1",
-    "core-js": "^3.0.1",
-    "css-loader": "^2.1.1",
-    "jest": "^24.7.1",
-    "live-server": "^1.2.1",
-    "moment": "^2.24.0",
-    "node-sass": "^4.11.0",
-    "normalize.css": "8.0.1",
-    "react": "^16.8.6",
-    "react-addons-shallow-compare": "^15.6.2",
-    "react-dates": "^20.1.0",
-    "react-dom": "^16.8.6",
-    "react-modal": "3.8.1",
-    "react-redux": "^7.1.0-alpha.1",
-    "react-router-dom": "^5.0.0",
-    "redux": "^4.0.1",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "uuid": "^3.3.2",
-    "validator": "8.0.0",
-    "webpack": "^4.30.0",
-    "webpack-dev-server": "^3.2.1"
+  "babel-cli": "^6.26.0",
+  "babel-core": "6.25.0",
+  "babel-loader": "7.1.1",
+  "babel-plugin-transform-class-properties": "6.24.1",
+  "babel-preset-env": "1.5.2",
+  "babel-preset-react": "6.24.1",
+  "css-loader": "^2.1.1",
+  "live-server": "^1.2.1",
+  "node-sass": "^4.11.0",
+  "normalize.css": "8.0.1",
+  "react": "16.0.0",
+  "react-dom": "16.0.1",
+  "react-modal": "3.8.1",
+  "sass-loader": "^7.1.0",
+  "style-loader": "^0.23.1",
+  "validator": "8.0.0",
+  "webpack": "^4.3.0",
+  "webpack-dev-server": "^3.2.1"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.0"
+  "webpack-cli": "^3.3.0"
   }
-}
+  }
